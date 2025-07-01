@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Gerenciamento de Tarefas</h1>
+        <div>
+            <label for="descricaoTarefa">Descrição da Tarefa:</label>
+            <input type="text" id="descricaoTarefa" placeholder="Ex: Concluir relatório">
+        </div>
+        <button id="adicionarBtn">Adicionar Tarefa</button>
+        <div id="mensagemErro" class="oculto"></div>
+        <table id="tabelaTarefas">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Descrição</th>
+                    <th>Data de Início</th>
+                    <th>Data de Conclusão</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+</body>
+</html>
