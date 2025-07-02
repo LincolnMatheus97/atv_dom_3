@@ -149,7 +149,7 @@ function concluirTarefa(id) {
 
 // Função que exclui tarefa do nosso banco(array) e atualiza nossa tabela
 function excluirTarefa(id) {
-    const confirmacao = confirm('Voçê deseja mesmo excluir essa tarefa?');
+    const confirmacao = confirm('Você deseja mesmo excluir essa tarefa?');
     if (confirmacao) {
         tarefas = tarefas.filter(trf => trf.id !== id);
         renderizarTabela();
