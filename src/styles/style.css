@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color-1:#4b9cf1;
+    --color-2:white;
+    --color-3:#d90429;
+    --color-4:#ffccd5;
+    --color-5:#ddd;
+    --color-6:#f4f4f4;
+    --color-7:#28a745;
+    --color-8:#FF4136;
+    --color-9:#E00000;
+}
+
+* {
+    font-family:'Poppins', Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--color-5);
+    height: 100vh;
+}
+
+.container-header h1 {
+    font-size: 24px;
+    color: var(--color-2);
+}
+
+.container-header {
+    height: 8%;
+    background-color: var(--color-1);
+    padding-left: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    
+}
+
+.container-input {
+    margin-bottom: 10px;
+}
+
+
+.container {
+    padding: 20px;
+    background-color: var(--color-5);
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    width: calc(100% - 22px);
+    box-sizing: border-box;
+    outline: none;
+    border-radius: 20px;
+    border: none;
+}
+
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--color-1);
+    color: var(--color-2);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color:var(--color-1);
+}
+
+.oculto {
+    display: none;
+}
+
+#mensagemErro {
+    color: var(--color-3);
+    background-color: var(--color-4);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border-left: 5px solid var(--color-3);
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid var(--color-5);
+    text-align: left;
+}
+
+th {
+    background-color: var(--color-6);
+}
+
+button.concluirBtn {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: var(--color-7);
+    color: var(--color-2);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+button.concluirBtn:hover {
+    background-color: var(--color-7);
+}
+
+button.excluirBtn {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: var(--color-8);
+    color: var(--color-2);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.excluirBtn:hover {
+    background-color: var(--color-9);
+}
