@@ -10,6 +10,8 @@
     --color-7:#28a745;
     --color-8:#FF4136;
     --color-9:#E00000;
+    --color-10: #2a8a41;
+    --color-11: #2461a3;
 }
 
 * {
@@ -118,7 +120,7 @@ button.concluirBtn {
 }
 
 button.concluirBtn:hover {
-    background-color: var(--color-7);
+    background-color: var(--color-10);
 }
 
 button.excluirBtn {
@@ -133,4 +135,20 @@ button.excluirBtn {
 
 button.excluirBtn:hover {
     background-color: var(--color-9);
+}
+
+button.editarBtn {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: var(--color-1);
+    color: var(--color-2);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}
+
+
+button.editarBtn:hover {
+    background-color: var(--color-11);
 }

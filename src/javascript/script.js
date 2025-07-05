@@ -56,7 +56,7 @@ function renderizarTabela() {
 
         const acoesCell = tr.querySelector('.acoes');
 
-        // Adiciona os botões de ações (Reabrir, Excluir e Concluir)
+        // Adiciona os botões de ações (Reabrir, Excluir, Concluir e Editar)
         if (tarefa.dataConclusao) {
             const reabrirBtn = document.createElement('button');
             reabrirBtn.textContent = 'Reabrir';
@@ -73,8 +73,14 @@ function renderizarTabela() {
             excluirBtn.className = 'excluirBtn';
             excluirBtn.onclick = () => excluirTarefa(tarefa.id);
 
+            const editarBtn = document.createElement('button');
+            editarBtn.textContent = 'Editar';
+            editarBtn.className = 'editarBtn';
+            editarBtn.onclick = () => editarTarefa(tarefa.id, tr);
+
             acoesCell.appendChild(concluirBtn);
             acoesCell.appendChild(excluirBtn);
+            acoesCell.appendChild(editarBtn);
         }
 
         tabelaTarefasBody.appendChild(tr);
@@ -154,6 +160,38 @@ function excluirTarefa(id) {
         tarefas = tarefas.filter(trf => trf.id !== id);
         renderizarTabela();
     }
+}
+
+
+function salvarEdicao(id,novaDescricao){
+    const tarefa = tarefas.find(t => t.id === id);
+    if(tarefa && novaDescricao.trim()){
+        tarefa.descricao = novaDescricao.trim();
+        
+    }
+
+    renderizarTabela()
+}
+
+
+function editarTarefa(id,elemento){
+    const tarefa = tarefas.find(t => t.id === id);
+    const descricaoCell = elemento.children[1];
+
+    const inputEdicao = document.createElement('input');
+    inputEdicao.type = 'text';
+    inputEdicao.value = tarefa.descricao;
+
+    descricaoCell.textContent = '';
+    descricaoCell.appendChild(inputEdicao);
+    inputEdicao.focus();
+
+    inputEdicao.addEventListener('blur', () => salvarEdicao(id, inputEdicao.value));
+    inputEdicao.addEventListener('keypress',(e) => {
+        if(e.key === 'enter'){
+            inputEdicao.blur();
+        }
+    })
 }
 
 // Chamamos a função para renderizar tabela pela primeira vez, para garantir que ela sempre esteja montada.
