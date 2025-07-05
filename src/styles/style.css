@@ -38,6 +38,7 @@ body {
     display: flex;
     justify-content: start;
     align-items: center;
+    padding: 5px;
     
 }
 
@@ -61,6 +62,7 @@ input {
     outline: none;
     border-radius: 20px;
     border: none;
+    margin-top: 10px;
 }
 
 
@@ -132,6 +134,7 @@ button.excluirBtn {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin-right: 5px;
 }
 
 button.excluirBtn:hover {
@@ -154,6 +157,22 @@ button.editarBtn:hover {
     background-color: var(--color-11);
 }
 
+select {
+    border: none;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+label {
+    font-weight: bold;
+    padding: 5px 10px;
+    background-color: var(--color-1);
+    color: var(--color-2);
+    border-radius: 50px;
+}
 
 .prioridade-baixa {
     color: var(--color-7);
