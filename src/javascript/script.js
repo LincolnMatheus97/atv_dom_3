@@ -51,6 +51,7 @@ function renderizarTabela() {
             <td>${tarefa.descricao}</td>
             <td>${tarefa.dataInicio}</td>
             <td>${tarefa.dataConclusao}</td>
+            <td class="prioridade-${tarefa.prioridade}">${tarefa.prioridade}</td>
             <td class="acoes"></td>
         `;
 
@@ -102,6 +103,7 @@ function criarErro(id, mensagem) {
 // Função que cria nova tarefa, adiciona ao nosso banco de dados(array) e atualiza nossa tabela
 function adicionarTarefa() {
     const descricao = descricaoTarefaInput.value.trim();
+    const prioridade = getById('prioridadeTarefa').value;
 
     // Verifica se existe uma descrição na caixa, senão, mostra mensagem de erro.
     if (!descricao) {
@@ -120,7 +122,8 @@ function adicionarTarefa() {
         id: idTarefas++,
         descricao: descricao,
         dataInicio: new Date().toLocaleDateString('pt-BR'),
-        dataConclusao: ""
+        dataConclusao: "",
+        prioridade: prioridade
     };
 
     tarefas.push(novaTarefa);

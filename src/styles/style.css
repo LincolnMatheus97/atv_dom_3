@@ -12,6 +12,7 @@
     --color-9:#E00000;
     --color-10: #2a8a41;
     --color-11: #2461a3;
+    --color-12:#f39c12;
 }
 
 * {
@@ -151,4 +152,18 @@ button.editarBtn {
 
 button.editarBtn:hover {
     background-color: var(--color-11);
+}
+
+
+.prioridade-baixa {
+    color: var(--color-7);
+    font-weight: bold;
+}
+.prioridade-media {
+    color: var(--color-12);
+    font-weight: bold;
+}
+.prioridade-alta {
+    color: var(--color-3);
+    font-weight: bold;
 }

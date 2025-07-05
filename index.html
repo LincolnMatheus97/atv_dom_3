@@ -15,8 +15,18 @@
     </div>
     <div class="container">
         <div class="container-input">
-            <label for="descricaoTarefa">Descrição da Tarefa:</label>
-            <input type="text" id="descricaoTarefa" placeholder="Ex: Concluir relatório">
+            <div>
+                <label for="prioridadeTarefa">Prioridade:</label>
+                <select id="prioridadeTarefa">
+                    <option value="baixa">Baixa</option>
+                    <option value="media">Média</option>
+                    <option value="alta">Alta</option>
+                </select>
+            </div>
+            <div>
+                <label for="descricaoTarefa">Descrição da Tarefa:</label>
+                <input type="text" id="descricaoTarefa" placeholder="Ex: Concluir relatório">
+            </div>
         </div>
         <button id="adicionarBtn">Adicionar Tarefa</button>
         <div id="mensagemErro" class="oculto"></div>
@@ -27,6 +37,7 @@
                     <th>Descrição</th>
                     <th>Data de Início</th>
                     <th>Data de Conclusão</th>
+                    <th>Prioridade</th>
                     <th>Ações</th>
                 </tr>
             </thead>
