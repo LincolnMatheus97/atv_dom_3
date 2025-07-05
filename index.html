@@ -3,15 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="src/styles/style.css">
+    <link rel="shortcut icon" href="src/imgs/favicon.ico" type="image/x-icon">
+    <script src="src/javascript/script.js" defer></script>
+    <title>DOM - Tarefas</title>
 </head>
 <body>
-    <h1>Gerenciamento de Tarefas</h1>
-        <div>
-            <label for="descricaoTarefa">Descrição da Tarefa:</label>
-            <input type="text" id="descricaoTarefa" placeholder="Ex: Concluir relatório">
+    <div class="container-header">
+        <img src="src/imgs/favicon.ico" alt="icon tarefas" width="50px">
+        <h1>Gerenciamento de Tarefas</h1>
+    </div>
+    <div class="container">
+        <div class="container-input">
+            <div>
+                <label for="prioridadeTarefa">Prioridade:</label>
+                <select id="prioridadeTarefa">
+                    <option value="baixa">Baixa</option>
+                    <option value="media">Média</option>
+                    <option value="alta">Alta</option>
+                </select>
+            </div>
+            <div>
+                <label for="descricaoTarefa">Descrição da Tarefa:</label>
+                <input type="text" id="descricaoTarefa" placeholder="Ex: Concluir relatório">
+            </div>
         </div>
         <button id="adicionarBtn">Adicionar Tarefa</button>
         <div id="mensagemErro" class="oculto"></div>
@@ -22,12 +37,13 @@
                     <th>Descrição</th>
                     <th>Data de Início</th>
                     <th>Data de Conclusão</th>
+                    <th>Prioridade</th>
                     <th>Ações</th>
                 </tr>
             </thead>
             <tbody>
             </tbody>
         </table>
-
+    </div>
 </body>
 </html>
